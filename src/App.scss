@@ -1,0 +1,33 @@
+@import './assets/fontawesome/scss/fontawesome.scss';
+@import './assets/fontawesome/scss/solid.scss';
+@import './assets/fontawesome/scss/brands.scss';
+@import '~bootstrap/scss/bootstrap';
+@import './assets/scss/custom.scss';
+
+.user {
+  @extend %fa-icon;
+  @extend .fas;
+
+  &:before {
+    content: fa-content($fa-var-user);
+  }
+}
+
+.twitter {
+  @extend %fa-icon;
+  @extend .fab;
+
+  &:before {
+    content: fa-content($fa-var-twitter);
+  }
+}
+
+.facebook {
+  @extend %fa-icon;
+  @extend .fab;
+  &:before {
+    content: fa-content($fa-var-facebook);
+  }
+}
+
+

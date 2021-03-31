@@ -1,0 +1,165 @@
+.heading-style {
+    text-align: center;
+    padding-bottom: 2rem;
+    .heading {
+        font-size: 2.5rem;
+        font-weight: 600;
+        color: #000000;
+        text-transform: uppercase;
+    }
+    .sub-heading {
+        font-size: 1.5rem;
+        font-weight: 400;
+        color: #d84295;
+        text-transform: capitalize;
+    }
+}
+
+
+.top_slide {
+    height: calc(100vh - 90px);
+    overflow: hidden;
+    .slick-slider {
+        height: calc(100vh - 90px);
+        overflow: hidden;
+        .top_slide_content_wrapper {
+            width: 100%;
+            height: calc(100vh - 90px);
+            position: relative;
+            img {
+                width: 100%;
+                height: calc(100vh - 90px);
+                position: relative;
+            }
+            .top_slide_content {
+                position: absolute;
+                top: 60%;
+                left: 150px;
+                h1, h3 {
+                    color: white;
+                    text-transform: uppercase;
+                    position: relative;
+                    z-index: 1;
+                }
+                h1 {
+                    transition-duration: .3s;
+                    transition-delay: .5s;
+                }
+                h3 {
+                    padding-left: 3rem;
+                }
+            }
+        }
+        .slick-dots {
+            bottom: 50px;
+            li.slick-active {
+                button{
+                    &::before{
+                        opacity: 1;
+                    }
+                } 
+            }
+            button{
+                &::before{
+                    font-size: .75rem;
+                    color: #ffffff;
+                    opacity: .5;
+                }
+            }
+        }
+    }
+}
+
+
+.random-products-section {
+    padding: 5rem 0 2.5rem;
+    overflow: hidden;
+    .heading-wrapper {
+        @extend .heading-style;
+    }
+    
+    .slick-slider {
+        // .slick-slide {
+        //     margin-right: 1rem;
+        // }
+
+        .product-wrapper {
+            overflow: hidden;
+            margin: 0 .5rem;
+            text-align: center;
+            background-color: #f7f7f7;
+            border-radius: 4px;
+            img {
+                width: 100%;
+            }
+            .title {
+                font-size: 1.25rem;
+                font-weight: 400;
+                color: #000000;
+                margin: 0;
+                padding: 1rem 0;
+            }
+            .price {
+                display: flex;
+                justify-content: space-between;
+                padding: 0 1rem 1rem;
+                ins, del {
+                 span {
+                    span {
+                        font-size: 1.5rem;
+                        font-weight: 600;
+                    }
+                 }
+                }
+                ins {
+                    text-decoration: none;}
+                del {
+                    color: red;
+                }
+            }
+        }
+    }
+}
+
+.category-section {
+    padding: 5rem 0 2.5rem;
+    overflow: hidden;
+    .heading-wrapper {
+        @extend .heading-style;
+    }
+    .category-wrapper {
+        &:not(:last-child) {
+            margin-bottom: 3rem;
+        }
+        .cat-menu-wrapper {
+            .cat-heading-wrapper {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                .title {
+                    flex: 94%;
+                    h2 {
+                        font-size: 1.5rem;
+                        font-weight: 400;
+                        text-transform: capitalize;
+                        margin-bottom: 0;
+                    }
+                }
+                .icon {
+                    flex: 6%;
+                    img {
+                        width: 100%;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+    
+    .cat-image-wrapper {
+        overflow: hidden;
+        img {
+            width: 100%;
+        }
+    }
+}

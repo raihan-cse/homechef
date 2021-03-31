@@ -1,0 +1,10 @@
+@import "hover";
+.navbar-nav {
+  color: white;
+  .nav-link{
+    color: red;
+    @include hover-focus() {
+      outline: none;
+    }
+  }
+}
