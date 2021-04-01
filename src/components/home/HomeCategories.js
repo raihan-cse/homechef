@@ -3,7 +3,6 @@ import { Col, Container, Row } from 'react-bootstrap'
 
 export default function HomeCategories() {
     const [categories, setCategories] = useState([])
-    console.log(categories)
 
     const baseUrl = 'https://homechef.masudlearn.com/category/'
     useEffect(() => {

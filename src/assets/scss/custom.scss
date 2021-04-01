@@ -1,3 +1,9 @@
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
 .heading-style {
     text-align: center;
     padding-bottom: 2rem;
@@ -12,6 +18,26 @@
         font-weight: 400;
         color: #d84295;
         text-transform: capitalize;
+    }
+}
+
+@mixin social-link-style() {
+    .social-links {
+        display: flex;
+        a {
+            display: block;
+            font-size: 1rem;
+            color: yellow;
+            text-align: center;
+            width: 24px;
+            height: 24px;
+            line-height: 22px;
+            border: 1px solid yellow;
+            border-radius: 4px;
+            &:not(:last-child) {
+                margin-right: .75rem;
+            }
+        }
     }
 }
 
@@ -163,3 +189,68 @@
         }
     }
 }
+
+
+.footer-section {
+    overflow: hidden;
+    padding: 5rem 0;
+    background-color: #000000;
+    color: #ffffff;
+    .flogo-wrapper {
+        .logo {
+            padding: .5rem 0;
+            img {
+                width: 50%;
+            }
+        }
+        p {
+            font-weight: 300;
+        }
+        .social-wrapper {
+            @include social-link-style();
+        }
+    }
+    .footer-title-wrapper {
+        padding-bottom: 1.5rem;
+        h2{
+            font-size: 1.5rem;
+            font-weight: 400;
+            text-transform: capitalize;
+            margin-bottom: 0;
+        }
+    }
+    .address-wrapper {
+        .footer-title-wrapper {
+            @extend .footer-title-wrapper;
+        }
+        ul {
+            margin-bottom: 0;
+            list-style: none;
+            padding: 0;
+            li {
+                line-height: 28px;
+                span {
+                    &:not(:last-child) {
+                        margin-right: .5rem;
+                        font-size: .875rem;
+                    }
+                }
+                font-size: 1rem;
+                font-weight: 300;
+                a {
+                    color: inherit;
+                }
+            }
+        }
+        
+    }
+    .map-wrapper {
+        .footer-title-wrapper {
+            @extend .footer-title-wrapper;
+        }
+        .map {
+            padding-top: .5rem;
+        }
+    }
+}
+
