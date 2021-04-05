@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container } from 'react-bootstrap'
 import Bgimage from '../../assets/images/shop-banner.jpg'
+import Products from '../products/Products'
 
 export default function Shop() {
     const bannerImage = {
@@ -21,6 +22,7 @@ export default function Shop() {
                     </div>
                 </Container>
             </section>
+            <Products />
         </>
     )
 }

@@ -48,20 +48,6 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     }
 }
 
-// @mixin banner-title-style() {
-//     .banner-title {
-//         position: absolute;
-//         top: 50%;
-//         left: 50%;
-//         transform: translate(-50%, 50%);
-//         h1 {
-//             font-size: 1.5rem;
-//             font-weight: 600;
-//             color: yellow;
-//         }
-//     }
-// }
-
 
 @mixin banner-title-style() {
     .banner-title {
@@ -320,6 +306,100 @@ h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
         }
         .map {
             padding-top: .5rem;
+        }
+    }
+}
+
+@mixin product-style {
+    overflow: hidden;
+    position: relative;
+    margin-bottom: 1.5rem;
+    background-color: #f7f7f7;
+    border-radius: 4px;
+}
+@mixin product-info-style {
+    padding: 1rem .5rem;
+    text-align: center;
+}
+@mixin product-title {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #000000;
+    padding-bottom: 1rem;
+}
+@mixin price-style {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    del, ins {
+        font-size: 0;
+        span {
+            font-size: 1.125rem;
+            font-weight: 400;
+            position: relative;
+            padding-left: .75rem;
+            &::before {
+                content: "৳";
+                position: absolute;
+                left: 0;
+                top: 0;
+                bottom: 0;
+                font-size: 1.5rem;
+                line-height: 20px;
+                font-weight: 500;
+            }
+        }
+    }
+    del {
+        color: #cb4131;
+        span {
+            color: inherit;
+        }
+    }
+    ins {
+        text-decoration: none;
+        color: #000000;
+        span {
+            color: inherit;
+        }
+    }
+}
+
+.products-section {
+    padding: 5rem 0;
+    overflow: hidden;
+    .category-wrapper {
+        h2 {
+            font-size: 1.25rem;
+            font-weight: 500;
+            color: #000000;
+            padding-bottom: 1rem;
+            text-transform: uppercase;
+        }
+        ul {
+            li {
+                &:not(:last-child) {
+                    margin-bottom: .75rem;
+                }
+                a {
+                    display: block;
+                    font-size: 1.125rem;
+                    font-weight: 400;
+                    color: #292929;
+                }
+            }
+        }
+    }
+    .product-wrapper {
+        @include product-style;
+    }
+    .product-info {
+        @include product-info-style;
+        h5 {
+            @include product-title;
+        }
+        .price {
+            @include price-style;
         }
     }
 }
