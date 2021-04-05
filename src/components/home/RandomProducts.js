@@ -6,7 +6,6 @@ import { Container } from 'react-bootstrap'
 
 export default function RandomProducts() {
     const [ranProduct, setRanProduct] = useState([])
-    console.log(ranProduct)
 
     const baseUrl = 'https://homechef.masudlearn.com/images/'
     useEffect(() => {

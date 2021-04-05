@@ -54,7 +54,7 @@ export default function Footer() {
                                     <h2>find us</h2>
                                 </div>
                                 <div className="map">
-                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7302.444074138098!2d90.40591297312173!3d23.775106406667526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7711041fe49%3A0x6724a7f9669fcc9e!2sNiketan%20Housing%20Project%2C%20Dhaka%201212!5e0!3m2!1sen!2sbd!4v1617271617342!5m2!1sen!2sbd" width="100%" height="auto" style={{border: "0", margin: "0"}} allowfullscreen="" loading="lazy"></iframe>
+                                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7302.444074138098!2d90.40591297312173!3d23.775106406667526!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3755c7711041fe49%3A0x6724a7f9669fcc9e!2sNiketan%20Housing%20Project%2C%20Dhaka%201212!5e0!3m2!1sen!2sbd!4v1617271617342!5m2!1sen!2sbd" width="100%" height="auto" title="footer map" style={{border: "0", margin: "0"}} allowFullScreen="" loading="lazy"></iframe>
                                 </div>
                             </div>
                         </Col>

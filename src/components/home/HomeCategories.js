@@ -6,7 +6,7 @@ export default function HomeCategories() {
 
     const baseUrl = 'https://homechef.masudlearn.com/category/'
     useEffect(() => {
-        fetch('https://apihomechef.masudlearn.com/api/category')
+        fetch('https://apihomechef.masudlearn.com/api/category/products')
             .then(res => res.json())
             .then(data => setCategories(data))
             .catch()
@@ -34,6 +34,22 @@ export default function HomeCategories() {
                                             </div>
                                         </div>
                                         <div className="menu-item-wrapper">
+                                            {catData.foods.map(product => (
+                                                <div className="menu-items" key={product.id}>
+                                                    <div className="title-wrap">
+                                                        <h4 className="title">{product.name}</h4>
+                                                    </div>
+                                                    <div className="mid-dots"></div>
+                                                    <div className="price-wrap">
+                                                        {product.price.map(price => (
+                                                            <span>
+                                                                <span>৳</span>
+                                                                {price.original_price}
+                                                            </span>
+                                                        ))}
+                                                    </div>
+                                                </div>
+                                            ))}
                                         </div>
                                     </div>
                                 </Col>
