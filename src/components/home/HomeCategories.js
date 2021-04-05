@@ -42,7 +42,7 @@ export default function HomeCategories() {
                                                     <div className="mid-dots"></div>
                                                     <div className="price-wrap">
                                                         {product.price.map(price => (
-                                                            <span>
+                                                            <span key={price.id}>
                                                                 <span>৳</span>
                                                                 {price.original_price}
                                                             </span>

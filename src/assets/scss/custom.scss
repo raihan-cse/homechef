@@ -7,9 +7,7 @@ a {
 h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 {
     margin-bottom: 0;
 }
-span {
-    vertical-align: middle;
-}
+
 .heading-style {
     text-align: center;
     padding-bottom: 2rem;
@@ -32,7 +30,7 @@ span {
         display: flex;
         a {
             display: block;
-            font-size: 1rem;
+            font-size: 0;
             color: yellow;
             text-align: center;
             width: 24px;
@@ -40,11 +38,50 @@ span {
             line-height: 22px;
             border: 1px solid yellow;
             border-radius: 4px;
+            &::before {
+                font-size: 1rem;
+            }
             &:not(:last-child) {
                 margin-right: .75rem;
             }
         }
     }
+}
+
+// @mixin banner-title-style() {
+//     .banner-title {
+//         position: absolute;
+//         top: 50%;
+//         left: 50%;
+//         transform: translate(-50%, 50%);
+//         h1 {
+//             font-size: 1.5rem;
+//             font-weight: 600;
+//             color: yellow;
+//         }
+//     }
+// }
+
+
+@mixin banner-title-style() {
+    .banner-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translateY(-50%);
+        transform: translateX(-50%);
+        h1 {
+            font-size: 3rem;
+            font-weight: 400;
+            color: #fec61c;
+            text-transform: capitalize;
+        }
+    }
+}
+
+
+.banner-section {
+    @include banner-title-style();
 }
 
 
@@ -286,4 +323,7 @@ span {
         }
     }
 }
+
+
+
 
